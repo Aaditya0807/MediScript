@@ -1,1 +1,77 @@
 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediScript</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <h1>MediScript</h1>
+        <img src="/uploads/image.png" alt="Profile" class="profile-pic" />
+      </div>
+
+      <p class="subheading">Automated Clinical Documentation with AI</p>
+
+      <!-- Upload Section -->
+      <div class="card upload-section">
+        <h2>Upload Audio</h2>
+        <label for="audioFile" class="upload-box">Click here to upload</label>
+        <input
+          type="file"
+          id="audioFile"
+          name="audio"
+          hidden
+          accept=".wav,.mp3"
+        />
+        <p id="fileName" class="file-name">No file selected</p>
+
+        <div class="file-tags">
+          <span>WAV</span>
+          <span>MP3</span>
+          <span>&lt; 10 MB</span>
+        </div>
+      </div>
+
+      <div class="divider"><span>OR</span></div>
+      <!-- Record Section -->
+      <div class="card record-section">
+        <h2>Record Audio</h2>
+        <button id="recordToggleBtn" class="btn record-btn">
+          🎙 Start Recording
+        </button>
+
+        <!-- Audio Preview Container -->
+        <div id="audioPreviewContainer" style="display: none; margin-top: 1em">
+          <h3>🎧 Recorded Audio Preview</h3>
+          <p id="recordedFileInfo" class="file-info">
+            Filename: recorded_audio.webm
+          </p>
+          <audio id="recordedAudio" controls></audio>
+        </div>
+      </div>
+
+      <!-- Generate Button -->
+      <button id="generateBtn" class="btn generate-btn">GENERATE</button>
+
+      <div id="loadingMessage">
+        <span>We are generating notes, please wait</span>
+        <span class="spinner"></span>
+      </div>
+      <br /><br />
+
+      <!-- Result Box -->
+      <div id="resultBox" class="card result-box" style="display: none">
+        <h2>Generated Output</h2>
+        <div id="resultText"></div>
+      </div>
+    </div>
+
+    <script src="/js/main.js"></script>
+  </body>
+</html>
+
