@@ -1,0 +1,20 @@
+# Core dependencies
+torch>=2.0
+transformers>=4.38.0
+accelerate>=0.27.0
+sentencepiece>=0.1.99
+
+# Audio processing
+librosa>=0.10.0
+soundfile>=0.12.1
+
+# Interface
+gradio>=4.14.0
+
+# Optional: Ensures compatibility with Whisper
+ffmpeg-python>=0.2.0
+
+# Prevent certain version conflicts (common with librosa/soundfile)
+numpy>=1.23
+scipy>=1.10
+flask
